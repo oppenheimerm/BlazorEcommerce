@@ -1,3 +1,5 @@
+using BEC.DataStore.InMemory;
+using BEC.UseCases.DataStoreInterfaces;
 using BEC.Web.Back.Areas.Identity;
 using BEC.Web.Back.Data;
 using Microsoft.AspNetCore.Components;
@@ -6,6 +8,8 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
+using BEC.UseCases;
+using BEC.UseCases.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +24,17 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+
+//  Repositories
+builder.Services.AddSingleton<ICategoryRepository, CategoryRepository>();
+
+
+//  Views
+//builder.Services.AddTransient<IViewInventoriesByNameUseCase, ViewInventoriesByNameUseCase>();
+
+//  Usercases
+builder.Services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUsecase>();
 
 var app = builder.Build();
 

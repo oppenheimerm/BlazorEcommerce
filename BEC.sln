@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEC.Web.Back", "BEC.Web.Back\BEC.Web.Back.csproj", "{151CF60F-358C-4FFF-81DD-7CCF04455BA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BEC.Web.Back", "BEC.Web.Back\BEC.Web.Back.csproj", "{151CF60F-358C-4FFF-81DD-7CCF04455BA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3CD3518-225A-40E7-9026-583B21C8AA2E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BEC.Core", "BEC.Core\BEC.Core.csproj", "{2F163A57-83B5-4F74-A059-99D2942F1E6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BEC.UseCases", "BEC.Usecases\BEC.UseCases.csproj", "{0EEAC018-40FE-488E-BB06-F6D0108FC046}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BEC.DataStore.InMemory", "BEC.DataStore.InMemory\BEC.DataStore.InMemory.csproj", "{49CE228F-B346-441E-AD0D-49D0253578F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,18 @@ Global
 		{151CF60F-358C-4FFF-81DD-7CCF04455BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{151CF60F-358C-4FFF-81DD-7CCF04455BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{151CF60F-358C-4FFF-81DD-7CCF04455BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F163A57-83B5-4F74-A059-99D2942F1E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F163A57-83B5-4F74-A059-99D2942F1E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F163A57-83B5-4F74-A059-99D2942F1E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F163A57-83B5-4F74-A059-99D2942F1E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EEAC018-40FE-488E-BB06-F6D0108FC046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EEAC018-40FE-488E-BB06-F6D0108FC046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EEAC018-40FE-488E-BB06-F6D0108FC046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EEAC018-40FE-488E-BB06-F6D0108FC046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49CE228F-B346-441E-AD0D-49D0253578F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49CE228F-B346-441E-AD0D-49D0253578F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49CE228F-B346-441E-AD0D-49D0253578F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49CE228F-B346-441E-AD0D-49D0253578F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,4 +15,15 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BEC.Core\BEC.Core.csproj" />
+    <ProjectReference Include="..\BEC.DataStore.InMemory\BEC.DataStore.InMemory.csproj" />
+    <ProjectReference Include="..\BEC.Usecases\BEC.UseCases.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Inventories\" />
+    <Folder Include="wwwroot\img\assets\" />
+  </ItemGroup>
+
 </Project>
