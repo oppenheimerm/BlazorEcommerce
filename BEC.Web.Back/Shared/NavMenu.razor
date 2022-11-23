@@ -1,39 +1,28 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">BEC.Web.Back</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+﻿
+<header class="navbar navbar-expand-md navbar-dark fixed-top site-header py-1 ">
+
+    <div class="container d-flex justify-content-end align-items-center">
+        <a class="navbar-brand" href="#">Grocery Managment Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-    </div>
-</div>
-
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
+        <div class="d-flex align-items-center justify-content-between">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <NavLink class="py-2 d-none d-md-inline-block" href="" Match="NavLinkMatch.All">
+                    Home
+                </NavLink>
+                <NavLink class="p-2 d-none d-md-inline-block" href="counter">
+                    Counter
+                </NavLink>
+                <NavLink class="p-2 d-none d-md-inline-block" href="fetchdata">
+                    Fetch data
+                </NavLink>
+            </ul>
+            <LoginDisplay />
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-    </nav>
-</div>
 
-@code {
-    private bool collapseNavMenu = true;
+    </div>    
+</header>
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
+@code { }

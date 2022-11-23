@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=RaMq72cDbbw&ab_channel=coderJeet
+
+Paging in ASP.NET Core Web API
+	https://code-maze.com/paging-aspnet-core-webapi/
+Blazor WebAssembly Pagination with ASP.NET Core Web API
+	https://code-maze.com/blazor-webassembly-pagination/
+
+Blazor routing object parameter
+	https://stackoverflow.com/questions/58452393/blazor-routing-object-parameter
+
+Parameters In Blazor Components (Deep Dive)
+	https://www.c-sharpcorner.com/article/parameters-in-blazor-server-deep-dive/
+
+https://www.pragimtech.com/blog/blazor/blazor-component-parameters/	
