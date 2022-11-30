@@ -20,13 +20,16 @@ namespace BEC.Web.Back.Pages.Categories
     public partial class CategoriesList
     {
         public CategoriesList()
-        {
+        { 
             allCategories = new List<Category>();
-            UseCasePagingParameters = new UseCasePagingParameters();
+            UseCasePagingParameters = new UseCasePagingParameters();            
         }
 
         private List<Category>? allCategories;
-        
+
+        [Inject]
+        private NavigationManager NavigationManager { get; set; }
+
         public UseCasePagingParameters? UseCasePagingParameters { get; set; }
 
         [Parameter]
@@ -36,6 +39,11 @@ namespace BEC.Web.Back.Pages.Categories
         public int? TotalPages { get; private set; }
         public int? TotalCount { get; private set; }
         //public int? CurrentPage { get; private set; }
+
+        public void OnClickAddCategory()
+        {
+            NavigationManager.NavigateTo("/addcategory");
+        }
 
         //  Lifecycle event of the component.  Triggered whenever the paramemter is changed, or when 
         // the component is first loaded and the parameter is set for the first time.

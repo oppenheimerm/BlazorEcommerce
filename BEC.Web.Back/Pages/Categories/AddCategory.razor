@@ -1,0 +1,32 @@
+﻿@page "/addcategory"
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Add Category</h1>
+	<br />
+	<div class="btn-toolbar mb-2 mb-md-0">
+		<div class="btn-group me-2">
+			<button type="button" class="btn btn-primary btn-dark" @onclick="OnClickBackToList">Back to list</button>
+		</div>
+	</div>
+</div>
+
+<br />
+
+@if(Category != null)
+{
+	<EditForm Model="Category" OnValidSubmit="OnValidSubmit">
+		<DataAnnotationsValidator></DataAnnotationsValidator>
+		<ValidationSummary></ValidationSummary>
+		<div class="form-group">
+			<label for="category">Category Code</label>
+			<input type="text" class="form-control" id="CategoryCode" @bind-value="Category.CategoryCode" placeholder="enter category code">
+			<small id="categoryCodeHelp" class="form-text text-muted">Required</small>
+		</div>
+		<div class="form-group">
+			<label for="category">Title</label>
+			<input type="text" class="form-control" id="Title" @bind-value="Category.Title" placeholder="enter title">
+			<small id="categoryTitleHelp" class="form-text text-muted">Required.</small>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</EditForm>
+}
