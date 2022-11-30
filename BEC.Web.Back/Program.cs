@@ -35,6 +35,7 @@ builder.Services.AddSingleton<ICategoryRepository, CategoryRepository>();
 
 //  Usercases
 builder.Services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUsecase>();
+builder.Services.AddTransient<IAddCategoryUseCase, AddCategoryUseCase>();
 
 var app = builder.Build();
 
